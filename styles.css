@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #cccccc; /* lighter gray for the navbar */
+    padding: 10px 0;
+    z-index: 100;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#navbar a {
+    padding: 10px 20px;
+    background-color: #999999; /* darker gray for the buttons */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px; /* gives the button a slightly rounded edge */
+    transition: background-color 0.3s ease; /* smooth transition effect when hovering over the button */
+}
+
+#navbar a:hover {
+    background-color: #777777; /* changes color when hovering over the button */
+}
+
+section {
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
