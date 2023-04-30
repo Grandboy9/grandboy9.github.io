@@ -1,54 +1,85 @@
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
 }
 
 #navbar {
-    display: none;
+    background-color: #222;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #cccccc; /* lighter gray for the navbar */
-    padding: 10px 0;
-    z-index: 100;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 300ms ease-in-out;
 }
 
 #navbar ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    list-style: none;
+    overflow: hidden;
+    background-color: #222;
 }
 
-#navbar li {
-    display: inline;
-    margin: 0 15px;
+#navbar ul li {
+    display: inline-block;
+    background-color: #222;
 }
 
-#navbar a {
-    padding: 10px 20px;
-    background-color: #999999; /* darker gray for the buttons */
-    color: #fff;
+#navbar ul li a {
+    display: block;
+    padding: 0 10px;
     text-decoration: none;
-    border-radius: 5px; /* gives the button a slightly rounded edge */
-    transition: background-color 0.3s ease; /* smooth transition effect when hovering over the button */
+    line-height: 60px;
+    color: lightgray;
 }
 
-#navbar a:hover {
-    background-color: #777777; /* changes color when hovering over the button */
+#navbar ul li a:hover {
+    background-color: #333;
 }
 
-section {
-    padding: 20px;
-    margin-top: 60px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+#navbar ul li a:active {
+    background-color: #555;
 }
 
-h1, h2 {
-    color: #333;
-}
-
-h1 {
+.logo {
+    float: left;
+    display: block;
+    color: #fff;
     text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 2em;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    float: right;
+    font-size: 2em;
+    margin: 20px;
+    cursor: pointer;
+}
+
+main {
+    margin: 0 auto;
+    padding-top: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #navbar ul {
+        display: none;
+    }
 }
